@@ -19,7 +19,7 @@ async def whoareyou(ctx):
 
 @client.event
 async def on_message(message):
-    channel = client.get_channel(908038417240186921)
+    channel = client.get_channel(channel id here)
     if message.guild is None and message.author != client.user:
         has_attachments = message.attachments != []
         if has_attachments:
