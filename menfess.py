@@ -1,3 +1,8 @@
+'''
+pls dont steal this code i wasted my time on this 
+'''
+
+
 import io
 import discord
 from discord.ext import commands
