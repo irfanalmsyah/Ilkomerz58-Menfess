@@ -38,7 +38,7 @@ async def on_message(message):
                 files = [await pull_attachment(attachment) for attachment in message.attachments]
         else:
             files = None
-        sent_message = await channel.send(embed = discord.Embed(title='Menfess: {}'.format(message.content), files=files))
+        sent_message = await channel.send('Menfess: {}'.format(message.content), files=files))
     await client.process_commands(message)
     
 async def pull_attachment(attachment):
