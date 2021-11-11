@@ -5,17 +5,23 @@ pls dont steal this code i wasted my time on this
 
 import io
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 from discord.ext.commands import bot
+from itertools import cylce
 
 client= commands.Bot(command_prefix = '$')
+status = cycle (['DM to send a menfess', 'Made by Irfan Alamsyah'])
 
 @client.event
 async def on_ready():
   print('{0.user} is on'.format(client))
-  await client.change_presence(activity=discord.Game('DM to send a menfess'))
-
+  change_status.start()
+ 
 client.remove_command('help')
+
+@tasks.loop(seconds=60)
+async def change_status():
+    await client.change_presence(activity=discord.Game(next(status)))
 
 #$whoareyou
 @client.command()
