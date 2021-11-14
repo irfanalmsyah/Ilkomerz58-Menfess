@@ -10,7 +10,7 @@ from discord.ext.commands import bot
 from itertools import cylce
 
 client= commands.Bot(command_prefix = '$')
-status = cycle (['DM to send a menfess', 'Made by Irfan Alamsyah'])
+status = cycle (['DM to send a menfess', 'Developed by @sooji'])
 
 @client.event
 async def on_ready():
