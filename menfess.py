@@ -19,7 +19,7 @@ async def on_ready():
  
 client.remove_command('help')
 
-@tasks.loop(seconds=60)
+@tasks.loop(seconds=10)
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
