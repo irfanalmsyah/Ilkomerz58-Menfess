@@ -87,11 +87,24 @@ async def m(ctx):
     del1 = message_content.replace(f".{str(ctx.command.name)} ", "", 1)
     files = await pull_files(ctx.message.attachments)
     await channel1.send('**Menfess:** '+del1, files=files)
-  
+
+@client.command()
+async def tampol(ctx, member:discord.User=None):
+  if (member == ctx.message.author or member == None):
+      await ctx.send(f"{ctx.message.author.mention} menampol diri sendiri!") 
+  else:
+      await ctx.send(f"{ctx.message.author.mention} menampol {member.mention}!")  
+
+@client.command()
+async def ping(ctx):
+  await ctx.send('https://github.com/irfanalmsyah/Ilkomerz58-Menfess')
+
 @client.command()
 async def gangerti(ctx):
   await ctx.send('.m <text> | bikin menfess tanpa thread')
   await ctx.send('.ct <judul thread> | bikin menfess pake thread')
   await ctx.send('.rt <thread index> <text> | reply ke thread pakai bot')
+  await ctx.send('.tampol <user> | tampol')
+  await ctx.send('.github | show the bot github repository')
 
 client.run (os.getenv("TOKEN"))
