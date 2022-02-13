@@ -96,7 +96,7 @@ async def tampol(ctx, member:discord.User=None):
       await ctx.send(f"{ctx.message.author.mention} menampol {member.mention}!")  
 
 @client.command()
-async def ping(ctx):
+async def github(ctx):
   await ctx.send('https://github.com/irfanalmsyah/Ilkomerz58-Menfess')
 
 @client.command()
