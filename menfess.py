@@ -101,10 +101,12 @@ async def github(ctx):
 
 @client.command()
 async def gangerti(ctx):
-  await ctx.send('.m <text> | bikin menfess tanpa thread')
-  await ctx.send('.ct <judul thread> | bikin menfess pake thread')
-  await ctx.send('.rt <thread index> <text> | reply ke thread pakai bot')
-  await ctx.send('.tampol <user> | tampol')
-  await ctx.send('.github | show the bot github repository')
-
+  await ctx.send("""
+.m <text> | bikin menfess tanpa thread
+.ct <judul thread> | bikin menfess pake thread
+.rt <thread index> <text> | reply ke thread pakai bot
+.tampol <user> | tampol
+.github | show the bot github repository
+  """)
+  
 client.run (os.getenv("TOKEN"))
