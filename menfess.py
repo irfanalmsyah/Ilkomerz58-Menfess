@@ -10,7 +10,7 @@ load_dotenv()
 client = commands.Bot(command_prefix='.')
 client.remove_command('help')
 channel_id = int(os.getenv("CHANNEL_ID"))
-status = cycle (["by @sooji & @kuntuy", "DM to send a menfess", "Happy Val's Day! 💗"])
+status = cycle (["by @sooji & @kuntuy", "DM to send a menfess"])
 
 @client.event
 async def on_ready():
