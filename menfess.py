@@ -86,7 +86,8 @@ async def m(ctx):
     message_content = str(ctx.message.content)
     del1 = message_content.replace(f".{str(ctx.command.name)} ", "", 1)
     files = await pull_files(ctx.message.attachments)
-    await channel1.send('**Menfess:** '+del1, files=files)
+    msg = await channel1.send('**Menfess:** '+del1, files=files)
+    await msg.add_reaction('❤️')
 
 @client.command()
 async def tampol(ctx, member:discord.User=None):
