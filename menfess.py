@@ -99,7 +99,7 @@ async def tampol(ctx, member:discord.User=None):
 @client.command()
 async def github(ctx):
   await ctx.send('https://github.com/irfanalmsyah/Ilkomerz58-Menfess')
-  await ctx.send('https://replit.com/@IrfanAlamsyah/menfess')
+  await ctx.send('https://replit.com/@irfanalmsyah/Ilkomerz58-Menfess')
 
 @client.command()
 async def gangerti(ctx):
