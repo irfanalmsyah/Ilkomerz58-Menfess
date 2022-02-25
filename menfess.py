@@ -3,9 +3,9 @@ from discord.ext import commands, tasks
 import io
 import os
 from itertools import cycle
-import random
 from dotenv import load_dotenv
 load_dotenv()
+from keep_alive import keep_alive
 
 client = commands.Bot(command_prefix='.')
 client.remove_command('help')
@@ -99,6 +99,7 @@ async def tampol(ctx, member:discord.User=None):
 @client.command()
 async def github(ctx):
   await ctx.send('https://github.com/irfanalmsyah/Ilkomerz58-Menfess')
+  await ctx.send('https://replit.com/@IrfanAlamsyah/menfess')
 
 @client.command()
 async def gangerti(ctx):
@@ -109,5 +110,6 @@ async def gangerti(ctx):
 .tampol <user> | tampol
 .github | show the bot github repository
   """)
-  
+
+keep_alive()  
 client.run (os.getenv("TOKEN"))
