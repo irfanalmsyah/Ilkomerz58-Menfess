@@ -4,9 +4,9 @@ import io
 import os
 from itertools import cycle
 from dotenv import load_dotenv
-load_dotenv()
 from keep_alive import keep_alive
 
+load_dotenv()
 client = commands.Bot(command_prefix='.')
 client.remove_command('help')
 channel_id = int(os.getenv("CHANNEL_ID"))
